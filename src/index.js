@@ -9,10 +9,12 @@ app.get('/', function (req, res) {
 - res.sendFile('/src/index.html');
 });
 
-app.get('/playground', function (req, res) {
-- res.sendFile('/src/dist');
-});
+path = __dirname+'/dist'
+app.use(express.static(path));
 
+app.get('/playground', function(req, res){
+   res.sendfile('/src/dist/index.html')
+});
 
 app.listen(PORT);
 console.log('Running on http://localhost:' + PORT);

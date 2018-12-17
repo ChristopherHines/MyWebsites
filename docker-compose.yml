@@ -1,0 +1,4 @@
+mysite:
+   build: .
+   ports: 
+        - "4900:4900"
