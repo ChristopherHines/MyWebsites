@@ -2,12 +2,14 @@ pipeline {
     agent { label 'master' }
     stages {
         stage('Lets see'){
-            withCredentials([usernamePassword(credentialsId: 'pi_creds', passwordVariable: 'password', usernameVariable: 'userName')]) {
-                remote.user = userName
-                remote.password = password
+            steps{
+                withCredentials([usernamePassword(credentialsId: 'pi_creds', passwordVariable: 'password', usernameVariable: 'userName')]) {
+                    remote.user = userName
+                    remote.password = password
 
-                stage("SSH into Raspberry Pi") {
-                    sshCommand remote: remote, command: 'docker --version'
+                    stage("SSH into Raspberry Pi") {
+                        sshCommand remote: remote, command: 'docker --version'
+                    }
                 }
             }
         }
