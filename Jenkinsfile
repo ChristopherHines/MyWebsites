@@ -1,9 +1,14 @@
 pipeline {
     agent { label 'master' }
     stages {
-        stage('build') {
+        stage('ssh into raspberry pi') {
             steps {
-                sh 'npm --version'
+                sh 'ssh pi@192.168.1.28'
+            }
+        }
+        stage('make sure we are here') {
+            steps {
+                sh 'whoami && hostname -I'
             }
         }
     }
