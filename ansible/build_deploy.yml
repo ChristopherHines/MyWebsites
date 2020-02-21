@@ -1,4 +1,4 @@
-- name: Build containers and spin them up
+- name: Build containers and run them
   hosts: localhost
   become: yes
   
