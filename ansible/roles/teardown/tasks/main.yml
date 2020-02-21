@@ -1,0 +1,4 @@
+- name: Stop app container
+  docker_container:
+    name: ssr_site
+    state: absent

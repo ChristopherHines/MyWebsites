@@ -17,11 +17,8 @@ node ('master') {
         stage('move to working directory') {
             sshCommand remote: remote, command: 'cd MyWebsites'
         }
-        stage('build container') {
-            sshCommand remote: remote, command: 'docker build --tag hines_site . &'
+        stage('run playbook') {
+            sshCommand remote: remote, command: 'ansible-playbook build_deploy.yml'
         }        
-        stage('run container') {
-            sshCommand remote: remote, command: 'docker run hines_site -p 4900:4900 --restart always &'
-        }
     }    
 }

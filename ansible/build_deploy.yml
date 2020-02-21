@@ -1,0 +1,16 @@
+- name: Build containers and spin them up
+  hosts: localhost
+  become: yes
+  
+  tasks:
+    - name: Build app container
+      import_role:
+        name: build
+
+    - name: Clean up
+      import_role:
+        name: teardown
+
+    - name: Deploy app
+      import_role:
+        name: deploy

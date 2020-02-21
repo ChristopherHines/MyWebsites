@@ -1,0 +1,6 @@
+- name: build app container
+  docker_image:
+    name: ssr_site
+    path: ../
+    tag: latest
+    force: yes

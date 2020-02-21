@@ -1,0 +1,9 @@
+- name: Start app container
+  docker_container:
+    name: ssr_site
+    image: ssr_site
+    recreate: yes
+    restart_policy: always
+    state: started
+    ports:
+        - "4900:4900"

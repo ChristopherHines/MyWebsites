@@ -1,4 +1,4 @@
-FROM hypriot/rpi-iojs:1.4.1
+FROM node:12-alpine
 
 # Adding source files into container
 ADD src/ /src
