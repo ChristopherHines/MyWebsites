@@ -14,11 +14,8 @@ node ('master') {
         stage('clone down project') {
             sshCommand remote: remote, command: 'rm -rf MyWebsites && git clone https://github.com/ChristopherHines/MyWebsites.git'
         }
-        stage('move to working directory') {
-            sshCommand remote: remote, command: 'cd MyWebsites/ansible'
-        }
         stage('run playbook') {
-            sshCommand remote: remote, command: 'ansible-playbook build_deploy.yml'
+            sshCommand remote: remote, command: 'ansible-playbook MyWebsites/ansible/build_deploy.yml'
         }        
     }    
 }
