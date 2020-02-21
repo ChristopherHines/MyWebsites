@@ -1,5 +1,4 @@
 FROM hypriot/rpi-iojs:1.4.1
-MAINTAINER Christopher Hines <christopherhines2016@gmail.com>
 
 # Adding source files into container
 ADD src/ /src

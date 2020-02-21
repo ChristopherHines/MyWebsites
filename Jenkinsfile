@@ -11,11 +11,17 @@ node ('master') {
         remote.user = userName
         remote.password = password
         
-        stage('clone down fresh copy of project') {
+        stage('clone down project') {
             sshCommand remote: remote, command: 'rm -rf MyWebsites && git clone https://github.com/ChristopherHines/MyWebsites.git'
         }
         stage('move to working directory') {
             sshCommand remote: remote, command: 'cd MyWebsites'
+        }
+        stage('build container') {
+            sshCommand remote: remote, command: 'docker build --tag hines_site . &'
+        }        
+        stage('run container') {
+            sshCommand remote: remote, command: 'docker run hines_site -p 4900:4900 --restart always &'
         }
     }    
 }
