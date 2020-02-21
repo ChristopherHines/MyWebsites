@@ -11,8 +11,8 @@ node ('master') {
         remote.user = userName
         remote.password = password
         
-        stage('clone down project') {
-            sshCommand remote: remote, command: 'git clone https://github.com/ChristopherHines/MyWebsites.git'
+        stage('clone down fresh copy of project') {
+            sshCommand remote: remote, command: 'rm -rf MyWebsites && git clone https://github.com/ChristopherHines/MyWebsites.git'
         }
         stage('move to working directory') {
             sshCommand remote: remote, command: 'cd MyWebsites'
