@@ -13,7 +13,7 @@ node ('master') {
         
         stage('clone down project') {
             sshCommand remote: remote, 
-                       command: 'rm -rf MyWebsites && git clone --branch ${ BRANCH_NAME } https://github.com/ChristopherHines/MyWebsites.git'
+                       command: 'rm -rf MyWebsites && git clone --branch ${BRANCH_NAME} https://github.com/ChristopherHines/MyWebsites.git'
         }
         stage('run playbook') {
             sshCommand remote: remote, 
