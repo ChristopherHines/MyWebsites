@@ -1,0 +1,10 @@
+{
+  "name": "hines-web-server",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Express.js webserver for Hines Bill Tracker",
+  "author": "Christopher Hines",
+  "dependencies": {
+    "express": "4.12.0"
+  }
+}

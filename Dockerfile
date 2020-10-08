@@ -9,7 +9,7 @@ WORKDIR /src
 # Install app dependencies
 RUN npm install
 
-# Open Port 4900
+# Expose port 80
 EXPOSE 80
 
 # Run Node.js
