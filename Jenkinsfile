@@ -1,6 +1,6 @@
 def remote = [:]
 remote.name = 'hinespi'
-remote.host = '192.168.1.18'
+remote.host = '192.168.1.28'
 remote.allowAnyHosts = true
 remote.sudo = false
 

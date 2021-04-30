@@ -1,13 +1,13 @@
-FROM python3
+FROM python:3.7-slim
 
 # Adding source files into container
 ADD . /src
 
-# Install dependencies
-RUN pip3 install flask
-
 # Define working directory
 WORKDIR /src
+
+# Install dependencies
+RUN pip3 install -r requirements.txt
 
 # Expose port 2000
 EXPOSE 2000

@@ -1,4 +1,9 @@
-- name: Stop app container
+- name: Stop web app container
   docker_container:
-    name: hines_site
+    name: bill_tracker
+    state: absent
+
+- name: Stop api container
+  docker_container:
+    name: flask_api
     state: absent
