@@ -1,6 +1,6 @@
 - name: build app container
   docker_image:
-    name: hines_site
+    name: bill_tracker
     path: ../
     tag: latest
     force: yes

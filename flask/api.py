@@ -1,14 +1,24 @@
 from flask import Flask 
+import sqlite3
 app = Flask(__name__)
 
-@app.route('/hinesBills')
+@app.route('/billData')
 def getHinesBills():
-    billData = {'mortgage': 0, 
-                'electric': 0,
-                'water': 0,
-                'gas': 0,
-                'internet': 0,
-                'mtime': '10/08/2020'}
+    conn = sqlite3.connect('bills.db')
+
+    cursor = conn.cursor()
+
+    rows = cursor.execute('''SELECT * FROM bills''')
+
+    billData = {}
+    for row in rows:
+        billData['mortgage'] = row[0]
+        billData['electric'] = row[1]
+        billData['water'] = row[2]
+        billData['gas'] = row[3]
+        billData['internet'] = row[4]
+        billData['mtime'] = row[5]
+
     return billData
 
 if __name__ == '__main__':

@@ -13,11 +13,15 @@ cursor = conn.cursor()
 #                     mtime DATE
 #                   )''')
 
-cursor.execute('''INSERT INTO bills VALUES(
-                    1400,
-                    100,
-                    179.16,
-                    26,
-                    70,
-                    DATE(now)
-                 )''')
+# conn.execute('''INSERT INTO bills VALUES(
+#                     1400,
+#                     100,
+#                     179.16,
+#                     26,
+#                     70,
+#                     DATE('now')
+#                  )''')
+
+conn.commit()
+
+conn.close()
