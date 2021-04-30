@@ -1,7 +1,7 @@
 FROM node:12-alpine
 
 # Adding source files into container
-ADD angular-project/express /src
+ADD bill-tracker/express /src
 
 # Define working directory
 WORKDIR /src
