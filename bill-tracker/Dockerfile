@@ -1,7 +1,7 @@
 FROM node:12-alpine
 
 # Adding source files into container
-ADD bill-tracker/express /src
+ADD express /src
 
 # Define working directory
 WORKDIR /src
