@@ -1,16 +1,16 @@
-- name: Build containers and run them
+- name: Build & run Bill Tracker and Flask api
   hosts: localhost
   become: yes
   
   tasks:
-    - name: Build app container
+    - name: Build web app & api container
       import_role:
         name: build
 
-    - name: Clean up
+    - name: Stop & remove old containers
       import_role:
         name: teardown
 
-    - name: Deploy app
+    - name: Spin up web app and api
       import_role:
         name: deploy
