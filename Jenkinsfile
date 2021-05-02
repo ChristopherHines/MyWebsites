@@ -13,7 +13,7 @@ node ('master') {
         
         stage('clone down project') {
             sshCommand remote: remote, 
-                       command: 'rm -rf MyWebsites && git clone --branch feature/pi_deploy https://github.com/ChristopherHines/MyWebsites.git'
+                       command: 'rm -rf MyWebsites && git clone --branch feature/pihole-walkthrough https://github.com/ChristopherHines/MyWebsites.git'
         }
         stage('run playbook') {
             sshCommand remote: remote, 
