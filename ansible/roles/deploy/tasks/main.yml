@@ -1,9 +1,19 @@
-- name: Start app container
+- name: Start web app container
   docker_container:
-    name: ssr_site
-    image: ssr_site
+    name: bill_tracker
+    image: bill_tracker
     recreate: yes
     restart_policy: always
     state: started
     ports:
-        - "4900:4900"
+        - "80:80"
+
+- name: Start api container
+  docker_container:
+    name: flask_api
+    image: flask_api
+    recreate: yes
+    restart_policy: always
+    state: started
+    ports:
+        - "2000:2000"

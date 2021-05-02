@@ -1,6 +1,13 @@
-- name: build app container
+- name: Build web app container
   docker_image:
-    name: ssr_site
-    path: ../
+    name: bill_tracker
+    path: ../bill-tracker
+    tag: latest
+    force: yes
+
+- name: Build api container
+  docker_image:
+    name: flask_api
+    path: ../flask
     tag: latest
     force: yes
