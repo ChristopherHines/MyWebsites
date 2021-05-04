@@ -12,11 +12,17 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { PiholeComponent } from './pihole/pihole.component';
+import { PivpnComponent } from './pivpn/pivpn.component';
+import { BillTrackerComponent } from './bill-tracker/bill-tracker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PiholeComponent,
+    PivpnComponent,
+    BillTrackerComponent
   ],
   imports: [
     BrowserModule,
