@@ -1,7 +1,7 @@
 - name: Build web app container
   docker_image:
-    name: bill_tracker
-    path: ../bill-tracker
+    name: hines-site
+    path: ../hines-site
     tag: latest
     force: yes
 

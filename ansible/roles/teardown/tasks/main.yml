@@ -1,6 +1,6 @@
 - name: Stop web app container
   docker_container:
-    name: bill_tracker
+    name: hines-site
     state: absent
 
 - name: Stop api container
