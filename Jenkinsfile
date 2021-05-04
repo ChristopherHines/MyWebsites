@@ -11,7 +11,8 @@ node ('master') {
     stage('build web app'){
         nodejs(nodeJSInstallationName: 'nodejs'){
             sh('npm install -g @angular/cli@latest')
-            sh('cd MyWebsites/hines-site && ng build')                  
+            sh('cd MyWebsites/hines-site && npm install')
+            sh('ng build')             
         }
     }
     stage('copy built project to pi'){
