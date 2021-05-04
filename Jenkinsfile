@@ -10,7 +10,7 @@ node ('master') {
     }
     stage('build web app'){
         nodejs(nodeJSInstallationName: 'nodejs'){
-            sh('npm install')
+            sh('npm install -g @angular/cli@latest')
             sh('cd MyWebsites/hines-site && ng build')                  
         }
     }
