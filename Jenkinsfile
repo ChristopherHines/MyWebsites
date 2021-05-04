@@ -12,12 +12,9 @@ node ('master') {
         nodejs(nodeJSInstallationName: 'nodejs'){
             sh('npm install -g @angular/cli@latest')
             sh('cd MyWebsites/hines-site && npm install')
-            sh('ls')
-            sh('ng build')             
+            sh('cd MyWebsites/hines-site && ng build')
+            sh('scp -rf MyWebsites pi@192.168.1.28:/home/pi/deployment')        
         }
-    }
-    stage('copy built project to pi'){
-        sh('pwd && ls')
     }
 
     withCredentials([usernamePassword(credentialsId:    'pi_creds', 
@@ -28,7 +25,7 @@ node ('master') {
         
         stage('run playbook') {
             sshCommand remote: remote, 
-                       command: 'ansible-playbook MyWebsites/ansible/build_deploy.yml'
+                       command: 'ansible-playbook deployment/MyWebsites/ansible/build_deploy.yml'
         }        
     }    
 }
