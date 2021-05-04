@@ -9,7 +9,7 @@ node ('master') {
         sh('rm -rf MyWebsites && git clone --branch feature/pihole-walkthrough https://github.com/ChristopherHines/MyWebsites.git')
     }
     stage('build web app'){
-        nodejs(nodeJSInstallationName: 'NodeJS 16.1.0'){
+        nodejs(nodeJSInstallationName: 'nodejs'){
             sh('npm install')
             sh('cd MyWebsites/hines-site && ng build')                  
         }
