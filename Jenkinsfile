@@ -5,16 +5,23 @@ remote.allowAnyHosts = true
 remote.sudo = false
 
 node ('master') {
+    stage('clone down project'){
+        sh('pwd && ls')
+        sh('rm -rf MyWebsites && git clone --branch feature/pihole-walkthrough https://github.com/ChristopherHines/MyWebsites.git')
+    }
+    stage('build web app'){
+        sh('cd MyWebsites/hines-site && ng build')
+    }
+    stage('copy built project to pi'){
+        sh('pwd && ls')
+    }
+
     withCredentials([usernamePassword(credentialsId:    'pi_creds', 
                                       passwordVariable: 'password', 
                                       usernameVariable: 'userName')]) {
         remote.user = userName
         remote.password = password
         
-        stage('clone down project') {
-            sshCommand remote: remote, 
-                       command: 'rm -rf MyWebsites && git clone --branch feature/pihole-walkthrough https://github.com/ChristopherHines/MyWebsites.git'
-        }
         stage('run playbook') {
             sshCommand remote: remote, 
                        command: 'ansible-playbook MyWebsites/ansible/build_deploy.yml'
