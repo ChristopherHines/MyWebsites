@@ -12,7 +12,7 @@ node ('master') {
         nodejs(nodeJSInstallationName: 'nodejs'){
             sh('npm install -g @angular/cli@latest')
             sh('cd MyWebsites/hines-site && npm install')
-            sh('\n && ls && \n')
+            sh('ls')
             sh('ng build')             
         }
     }
