@@ -9,13 +9,10 @@ node ('master') {
         sh('rm -rf MyWebsites && git clone --branch feature/pihole-walkthrough https://github.com/ChristopherHines/MyWebsites.git')
     }
     stage('build web app'){
-        steps{
-            nodejs(){
-                sh('npm install')
-                sh('cd MyWebsites/hines-site && ng build')                  
-            }
+        nodejs(){
+            sh('npm install')
+            sh('cd MyWebsites/hines-site && ng build')                  
         }
-
     }
     stage('copy built project to pi'){
         sh('pwd && ls')
