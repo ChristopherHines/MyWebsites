@@ -14,7 +14,7 @@ node ('master') {
             sh('cd MyWebsites/hines-site && npm install')
             sh('cd MyWebsites/hines-site && ng build')
             sh('cd MyWebsites/hines-site && rm -rf node_modules')
-            sh('scp -rf MyWebsites pi@192.168.1.28:/home/pi/deployment')        
+            sh('scp -r MyWebsites pi@192.168.1.28:/home/pi/deployment')        
         }
     }
 
