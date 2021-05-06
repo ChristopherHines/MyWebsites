@@ -1,17 +1,6 @@
-<img id="cuzco_image" src="../../assets/cuzco_crop.jpg">
-
-<mat-toolbar color="primary">
-  <span>Hines Site</span>
-  <span class="example-spacer"></span>
-  <mat-icon class="example-icon" matTooltip="send email to developer"
-    >mail</mat-icon
-  >
-  <mat-icon class="example-icon" matTooltip="view source code">source</mat-icon>
-</mat-toolbar>
-
 <div class="grid_items">
-  <div class="grid_item">
-    <mat-card class="example-card">
+  <div class="grid_item" [routerLink]="['/bill-tracker']">
+    <mat-card class="example-card" >
         <mat-card-header>
         <div mat-card-avatar id="chart-image"></div>
         <mat-card-title>Bill Tracker</mat-card-title>
@@ -22,7 +11,7 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <div class="grid_item">
+  <div class="grid_item" [routerLink]="['/pihole']">
     <mat-card class="example-card">
         <mat-card-header>
           <div mat-card-avatar id="pihole-image"></div>
@@ -37,7 +26,7 @@
         </mat-card-content>
       </mat-card>
   </div>
-  <div class="grid_item">
+  <div class="grid_item" [routerLink]="['/pivpn']">
     <mat-card class="example-card">
         <mat-card-header>
           <div mat-card-avatar id="pivpn-image"></div>

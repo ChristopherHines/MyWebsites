@@ -1,1 +1,10 @@
-<app-home></app-home>
+<img id="cuzco_image" src="../../assets/cuzco_crop.jpg">
+
+<mat-toolbar color="primary">
+  <span id="title" [routerLink]="['/home']">Hines Site</span>
+  <span class="example-spacer"></span>
+  <mat-icon class="example-icon" matTooltip="view source code">source</mat-icon>
+  <mat-icon class="example-icon" matTooltip="send email to developer">mail</mat-icon>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
