@@ -1,8 +1,9 @@
 <img id="cuzco_image" src="../../assets/cuzco_crop.jpg">
 
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" id="toolbar">
   <span id="title" [routerLink]="['/home']">Hines Site</span>
   <span class="example-spacer"></span>
+  <mat-icon class="example-icon" matTooltip="go back to home" [routerLink]="['/home']">home</mat-icon>
   <mat-icon class="example-icon" matTooltip="view source code">source</mat-icon>
   <mat-icon class="example-icon" matTooltip="send email to developer">mail</mat-icon>
 </mat-toolbar>

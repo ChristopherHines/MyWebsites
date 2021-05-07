@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pihole.component.html',
   styleUrls: ['./pihole.component.css']
 })
+
 export class PiholeComponent implements OnInit {
+  pihole_walkthrough = 'To start, install pihole to your raspberry pi.'
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

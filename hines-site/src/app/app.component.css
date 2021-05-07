@@ -3,6 +3,11 @@
   cursor: pointer
 }
 
+#toolbar {
+  box-shadow: 0 8px 20px -5px black;
+  position: relative;
+}
+
 #cuzco_image {
   width: 100%;
   margin-bottom: -6px;
@@ -10,4 +15,9 @@
 
 .example-spacer {
   flex: 1 1 auto;
+}
+
+.example-icon {
+  padding: 0 14px;
+  cursor: pointer;
 }
