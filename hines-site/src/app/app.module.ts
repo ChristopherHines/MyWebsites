@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { PiholeComponent } from './pihole/pihole.component';
 import { PivpnComponent } from './pivpn/pivpn.component';
 import { BillTrackerComponent } from './bill-tracker/bill-tracker.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BillTrackerComponent } from './bill-tracker/bill-tracker.component';
     HomeComponent,
     PiholeComponent,
     PivpnComponent,
-    BillTrackerComponent
+    BillTrackerComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
