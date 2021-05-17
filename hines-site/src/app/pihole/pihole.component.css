@@ -6,7 +6,7 @@
 body {
   font-family: Arial;
   padding: 20px;
-  background-color: #222423
+  background-color: #222423;
 }
 
 /* Header/Blog Title */
@@ -15,7 +15,7 @@ body {
   font-size: 40px;
   text-align: center;
   color: white;
-  background-color: #222423
+  background-color: #222423;
 }
 
 /* Create two unequal columns that floats next to each other */

@@ -4,7 +4,11 @@
       <h2>PiHole installation</h2>
       <h5>May 7, 2021</h5>
       <mat-card>
-        <img class="pihole_image" src="../../assets/pihole/pihole_logo.png" alt="PiHole Logo" />
+        <img
+          class="pihole_image"
+          src="../../assets/pihole/pihole_logo.png"
+          alt="PiHole Logo"
+        />
       </mat-card>
       <p>Network Wide ad blocking</p>
       <p>
@@ -15,73 +19,117 @@
       <div>
         <code> curl -sSL https://install.pi-hole.net | bash </code>
       </div>
-      <br/>
+      <br />
       <p>
         Then, when the installer pops up, hit enter to continue. You will then
         have to choose an interface.
       </p>
       <li>Choose which interface to use</li>
       <p>eth0 for ethernet, and wlan for wifi</p>
-      <img class="pihole_image" src="../../assets/pihole/pihole_interface.webp" alt="PiHole interface" />
+      <img
+        class="pihole_image"
+        src="../../assets/pihole/pihole_interface.webp"
+        alt="PiHole interface"
+      />
       <li>Choose a DNS provider</li>
       <p>
-          I prefer to use the Google DNS, but choose whichever one you are most comfortable
-          with. 
+        I prefer to use the Google DNS, but choose whichever one you are most
+        comfortable with.
       </p>
-      <img class="pihole_image" src="../../assets/pihole/pihole_dns.webp" alt="PiHole dns" />
+      <img
+        class="pihole_image"
+        src="../../assets/pihole/pihole_dns.webp"
+        alt="PiHole dns"
+      />
       <li>Choose third-party lists for ad blocking</li>
       <p>I would suggest to use the space bar to select them all</p>
-      <img class="pihole_image" src="../../assets/pihole/pihole_lists.webp" alt="PiHole block list" />
+      <img
+        class="pihole_image"
+        src="../../assets/pihole/pihole_lists.webp"
+        alt="PiHole block list"
+      />
       <li>Choose static ip address</li>
       <p>
-         When your devices need to connect to your pi, we need to be able to keep the ip address
-         of the pi the same. Hit yes to assign a static ip address to your pi.
+        When your devices need to connect to your pi, we need to be able to keep
+        the ip address of the pi the same. Hit yes to assign a static ip address
+        to your pi.
       </p>
-      <img class="pihole_image" src="../../assets/pihole/pihole_ip.webp" alt="PiHole static ip" />
+      <img
+        class="pihole_image"
+        src="../../assets/pihole/pihole_ip.webp"
+        alt="PiHole static ip"
+      />
       <p>
-          The installer will then ask you if you want to enable the web admin interface, I would
-          check 'On' and continue.
+        The installer will then ask you if you want to enable the web admin
+        interface, I would check 'On' and continue.
       </p>
-      <img class="pihole_image" src="../../assets/pihole/pihole_ui.webp" alt="PiHole admin portal" />
+      <img
+        class="pihole_image"
+        src="../../assets/pihole/pihole_ui.webp"
+        alt="PiHole admin portal"
+      />
       <li>Finally, select your privacy mode</li>
       <p>I would check 0 and continue.</p>
-      <img class="pihole_image" src="../../assets/pihole/pihole_ftl.webp" alt="PiHole ftl" />
+      <img
+        class="pihole_image"
+        src="../../assets/pihole/pihole_ftl.webp"
+        alt="PiHole ftl"
+      />
       <p>
-          Your installation should be complete! This final page will give you your static IP,
-          the link to your pihole admin webpage, and the login password for it.
+        Your installation should be complete! This final page will give you your
+        static IP, the link to your pihole admin webpage, and the login password
+        for it.
       </p>
-      <img class="pihole_image" src="../../assets/pihole/pihole_complete.webp" alt="PiHole completion" />
+      <img
+        class="pihole_image"
+        src="../../assets/pihole/pihole_complete.webp"
+        alt="PiHole completion"
+      />
     </mat-card>
     <mat-card class="card">
       <h2>Router Setup</h2>
       <h5>May 8, 2021</h5>
-      <img class="router_image" src="../../assets/pihole/pihole_router.jpg" alt="PiHole router" />
-      <br>
+      <img
+        class="router_image"
+        src="../../assets/pihole/pihole_router.jpg"
+        alt="PiHole router"
+      />
+      <br />
       <p>
-        In order for your divices to connect to your pihole instance, you'll need to change 
-        what DNS server you router uses, to your raspberry pi ip address. 
+        In order for your devices to connect to your pihole instance, you'll
+        need to change the primary ip address DNS server your router uses to
+        your raspberry pi ip address. Now, all requests that go through your
+        router will use your pihole instance to filter ads.
       </p>
-      <img class="large_image" src="../../assets/pihole/dns_example.PNG" alt="router dns" />
+      <img
+        class="large_image"
+        src="../../assets/pihole/dns_example.PNG"
+        alt="router dns"
+      />
     </mat-card>
     <mat-card class="card">
-        <h2>Verify Installation</h2>
-        <h5>May 16, 2021</h5>
-        <br>
-        <p>
-            To make sure that your pihole is fully set up, let's go to your pihole admin page.
-            Get your raspberry pi's ip address, and put that into your browser. ex. 192.168.1.28
-            and log in. If you are unable to log in using the randomly generated password, run
-            this command to set a new password.
-        </p>
-        <code>pihole -a -p</code>
-        <p>
-            You should be able to get to this page and see some requests getting blocked.
-        </p>
-        <img class="large_image" src="../../assets/pihole/pihole_admin.PNG" alt="pihole admin page" />
-        <p>
-            You should be all set from here!
-        </p>
-      </mat-card>
+      <h2>Verify Installation</h2>
+      <h5>May 16, 2021</h5>
+      <br />
+      <p>
+        To make sure that your pihole is fully set up, let's go to your pihole
+        admin page. Get your raspberry pi's ip address, and put that into your
+        browser. ex. 192.168.1.28 and log in. If you are unable to log in using
+        the randomly generated password, run this command to set a new password:
+      </p>
+      <code>pihole -a -p</code>
+      <br />
+      <p>
+        You should be able to get to this page and see some requests getting
+        blocked.
+      </p>
+      <img
+        class="large_image"
+        src="../../assets/pihole/pihole_admin.PNG"
+        alt="pihole admin page"
+      />
+      <p>You should be all set from here!</p>
+    </mat-card>
   </div>
   <div class="rightcolumn">
     <app-side-bar></app-side-bar>
@@ -89,5 +137,5 @@
 </div>
 
 <mat-toolbar color="primary" (click)="scrollToTop()">
-    <div id="top">back to top</div>
+  <div id="top">back to top</div>
 </mat-toolbar>
