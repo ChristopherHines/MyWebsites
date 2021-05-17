@@ -56,18 +56,38 @@
       <h2>Router Setup</h2>
       <h5>May 8, 2021</h5>
       <img class="router_image" src="../../assets/pihole/pihole_router.jpg" alt="PiHole router" />
-      <p>Generic Router</p>
+      <br>
       <p>
         In order for your divices to connect to your pihole instance, you'll need to change 
         what DNS server you router uses, to your raspberry pi ip address. 
       </p>
+      <img class="large_image" src="../../assets/pihole/dns_example.PNG" alt="router dns" />
     </mat-card>
+    <mat-card class="card">
+        <h2>Verify Installation</h2>
+        <h5>May 16, 2021</h5>
+        <br>
+        <p>
+            To make sure that your pihole is fully set up, let's go to your pihole admin page.
+            Get your raspberry pi's ip address, and put that into your browser. ex. 192.168.1.28
+            and log in. If you are unable to log in using the randomly generated password, run
+            this command to set a new password.
+        </p>
+        <code>pihole -a -p</code>
+        <p>
+            You should be able to get to this page and see some requests getting blocked.
+        </p>
+        <img class="large_image" src="../../assets/pihole/pihole_admin.PNG" alt="pihole admin page" />
+        <p>
+            You should be all set from here!
+        </p>
+      </mat-card>
   </div>
   <div class="rightcolumn">
     <app-side-bar></app-side-bar>
   </div>
 </div>
 
-<mat-toolbar color="primary" id="toolbar">
-    back to top
+<mat-toolbar color="primary" (click)="scrollToTop()">
+    <div id="top">back to top</div>
 </mat-toolbar>

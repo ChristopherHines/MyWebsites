@@ -12,4 +12,8 @@ export class PiholeComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {}
 
+  scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
 }
