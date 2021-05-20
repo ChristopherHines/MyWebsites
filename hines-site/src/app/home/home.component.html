@@ -1,0 +1,46 @@
+<div class="grid_items">
+  <div class="grid_item" [routerLink]="['/bill-tracker']">
+    <mat-card class="example-card" >
+        <mat-card-header>
+        <div mat-card-avatar id="chart-image"></div>
+        <mat-card-title>Bill Tracker</mat-card-title>
+        <mat-card-subtitle>Bills month over month</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Shows a graph of my bills month over month. I'm using Chart.js to produce the graphs.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="grid_item" [routerLink]="['/pihole']">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar id="pihole-image"></div>
+          <mat-card-title>Pi Hole</mat-card-title>
+          <mat-card-subtitle>Setup Walkthrough</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            A walkthrough of how to get PiHole running from your very own pi! PiHole is a network-wide 
+            ad blocking solution.
+          </p>
+        </mat-card-content>
+      </mat-card>
+  </div>
+  <div class="grid_item" [routerLink]="['/pivpn']">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar id="pivpn-image"></div>
+          <mat-card-title>Pi VPN</mat-card-title>
+          <mat-card-subtitle>Setup Walkthrough</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            A walkthrough of how to get set up with PiVPN.
+          </p>
+        </mat-card-content>
+      </mat-card>
+  </div>
+  <div class="grid_item"></div>
+  <div class="grid_item"></div>
+  <div class="grid_item"></div>
+</div>

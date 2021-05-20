@@ -1,7 +1,7 @@
 - name: Start web app container
   docker_container:
-    name: bill_tracker
-    image: bill_tracker
+    name: hines-site
+    image: hines-site
     recreate: yes
     restart_policy: always
     state: started

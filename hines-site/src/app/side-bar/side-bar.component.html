@@ -1,0 +1,23 @@
+<div class="card">
+  <h2>About Me</h2>
+  <img
+    class="side-bar-image"
+    src="../../assets/front_house_night.jpg"
+    alt="Front House Night"
+  />
+  <p>Read my about me and check out my resume!</p>
+  <div class="card">
+    <h3>Other pages</h3>
+    <mat-card *ngFor="let page of otherPages" class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar [ngClass]="page.image"></div>
+        <mat-card-title>{{ page.title }}</mat-card-title>
+        <mat-card-subtitle>{{ page.subtitle }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <div class="card">
+    <h3>Resources</h3>
+    <p>Project Euler</p>
+  </div>
+</div>
