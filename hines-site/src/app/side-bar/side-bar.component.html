@@ -4,8 +4,9 @@
     class="side-bar-image"
     src="../../assets/front_house_night.jpg"
     alt="Front House Night"
+    [routerLink]="['/about-me']"
   />
-  <p>Read my about me and check out my resume!</p>
+  <p>Read my <a [routerLink]="['/about-me']"> about me</a> and check out my resume!</p>
   <div class="card">
     <h3>Other pages</h3>
     <mat-card *ngFor="let page of otherPages" class="example-card">
