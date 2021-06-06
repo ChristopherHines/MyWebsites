@@ -6,7 +6,7 @@ remote.sudo = false
 
 node ('master') {
     stage('clone down project'){
-        sh('rm -rf MyWebsites && git clone --branch feature/pihole-walkthrough https://github.com/ChristopherHines/MyWebsites.git')
+        sh('rm -rf MyWebsites && git clone --branch ${BRANCH_NAME} https://github.com/ChristopherHines/MyWebsites.git')
     }
     stage('build web app'){
         nodejs(nodeJSInstallationName: 'nodejs'){
