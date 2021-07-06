@@ -6,7 +6,7 @@
     restart_policy: always
     state: started
     ports:
-        - "80:80"
+        - "443:443"
 
 - name: Start api container
   docker_container:
