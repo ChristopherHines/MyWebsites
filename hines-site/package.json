@@ -24,7 +24,9 @@
     "@angular/platform-browser": "~9.0.2",
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "~9.0.2",
+    "@balkangraph/orgchart.js": "^8.0.34",
     "rxjs": "~6.5.4",
+    "stable": "^0.1.8",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

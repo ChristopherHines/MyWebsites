@@ -40,7 +40,20 @@
         </mat-card-content>
       </mat-card>
   </div>
-  <div class="grid_item"></div>
+  <div class="grid_item" [routerLink]="['/family-tree']">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar id="family-tree-image"></div>
+        <mat-card-title>Family tree</mat-card-title>
+        <mat-card-subtitle>Hines family tree</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Family tree breakdown of the Hines family, will be continuously updated.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
   <div class="grid_item"></div>
   <div class="grid_item"></div>
 </div>
